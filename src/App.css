@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*    Reset CSS  */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto';
+}
+ol,
+ul {
+	list-style: none;
+}
+a {
+	outline: 0;
+	text-decoration: none;
+	color: #edeeef;
+}
+img {
+	border: 0;
+}
+
+body {
+	background: #eee;
+	overflow-x: hidden;
+}
+
+.list_box > h1 {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	color: #345463;
+	font-size: 3.3rem;
+	letter-spacing: 2px;
+	margin: 20px 0;
+}
+
+.list_box {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	padding: 4rem;
+	padding-bottom: 0;
+	max-width: 500px;
+}
+
+.input_todo {
+	display: inline-block;
+	width: 100%;
+	padding: 10px;
+	margin: 0 -10px;
+	transform: translateX(-2px);
+	border: 2px dashed #345463;
+}
+
+.input_todo::placeholder {
+	letter-spacing: 1px;
+	color: #aaa;
+}
+
+.list_todo {
+	width: 100%;
+	padding: 15px;
+	margin: 0 -15px;
+}
+.list_todo > li {
+	position: relative;
+	padding: 8px 0;
+	border-bottom: 1px solid #36677f3f;
+}
+.list_todo > li > p {
+	display: inline-block;
+	word-break: break-all;
+	padding: 3px 0;
+	padding-right: 75px;
+	color: #787878;
+}
+.list_todo > li > button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	padding: 6px;
+	background-color: #36677fbd;
+	color: #eee;
+	border: none;
+	border-radius: 3px;
+	font-size: 12px;
+	line-height: 12px;
+	vertical-align: middle;
+}
+.list_todo > li > button:nth-of-type(1) {
+	padding: 6px 10px;
+}
+.list_todo > li > button:nth-of-type(2) {
+	margin-right: 30px;
+}
+
+/* img animation */
+.animation_box {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	margin-left: -100px;
+	z-index: -1;
+}
+.bird {
+	position: absolute;
+	top: -1%;
+	transition: all 0.5s;
+	animation: bdd linear 0.8s infinite alternate;
+}
+.bird_t {
+	position: absolute;
+}
+.bird_b {
+	position: absolute;
+	transition: all 0.5s;
+	animation: bdk linear 0.8s infinite alternate;
+}
+@keyframes bdd {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(15deg);
+	}
+}
+@keyframes bdk {
+	0% {
+		transform: rotateY(45deg) translate(3px, -2px);
+	}
+	100% {
+		transform: rotateY(-1deg) translate(2px);
+	}
+}
