@@ -34,7 +34,11 @@ const TodoFrom = () => {
 	const onClickChange = (item) => {
 		let renewList = [...list]; //데이터 주소값을 중복을 피하기위해 값을 복사
 		let reItem = window.prompt('변경 될 값입력');
-
+		//변경 값이 빈값일시
+		if (reItem === '' || reItem === ' ') {
+			return false;
+		}
+		//변경 값 적용
 		list.map((cur, idx) => {
 			if (item === cur.id) renewList[idx].item = reItem;
 		});
